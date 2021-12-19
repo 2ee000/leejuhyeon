@@ -1,0 +1,116 @@
+@font-face{
+    font-family: abster;
+    src:url(font/abster-webfont.woff) format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(back.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+
+.container .header{
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header h1 a{
+    text-decoration: none;
+    color: white;
+    font-family: abster;
+}
+
+.container .nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.container .nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.container .nav ul li a:hover{
+    color: #ff8a80;
+}
+
+.login-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.int-area {
+    width: 400px;
+    position: relative;
+}
+
+.int-area:first-child{margin-top: 0;}
+.int-area input{
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px; color: white;
+    outline: none;
+}
+
+.int-area label{
+    position: absolute;left: 10px;top: 15px;
+    font-size: 18px; color:white;
+    transition: top .5s ease;
+}
+
+.int-area input:focus + label,
+.int-area input:valid + label{
+    color: #ff8a80;
+    top:0;
+}
+
+.btn-area{
+    margin-top: 30px;
+}
+
+.btn-area button{
+    width: 100%; height: 50px;
+    background: #aa7c78;
+    color: white;
+    font-size: 20px;
+    border-color: white;
+    border-radius: 25px;
+}
+
+.caption{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.caption a{
+    font-size: 15px; color: white;
+    text-decoration: none;
+}
