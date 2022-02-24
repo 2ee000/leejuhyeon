@@ -1,0 +1,41 @@
+#include<iostream>
+
+using namespace std;
+
+class turtle {
+private:
+	int num[4] = { 0 };
+public:
+	void input();
+	void square();
+};
+
+void turtle::input() {
+	for (int i = 0; i < 4; i++) {
+		cin >> num[i];
+	}
+}
+
+void turtle::square() {
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < i; j++) {
+			if (num[i] < num[j]) {
+				int tmp = num[i];
+				num[i] = num[j];
+				num[j] = tmp;
+			}
+		}
+	}
+	if (num[3] - num[2] < 0 || num[1] - num[0] < 0) {
+		cout << "error" << endl;
+	}
+	else {
+		cout << num[2] * num[0];
+	}
+}
+
+int main(void) {
+	turtle t;
+	t.input();
+	t.square();
+}
